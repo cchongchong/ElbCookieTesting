@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <h1>Write all three cookies</h1>
+    <form action="@Url.Action("WriteCookies")" method="POST">
+        <div>
+            <label for="value">Cookie Value:</label>
+            <input type="text" name="value" id="value"/>
+        </div>
+        <button type="submit">Write Cookie in three ways</button>
+    </form>
+</div>
+<div>
+    <h1>
+        Reads all three cookies
+    </h1>
+    <div>
+        <h2>
+            "SameAsRequest": cookie was written in Secure Mode as same as request. (If coming request is HTTP, secure mode is off, if comming request is HTTPS, secure mode is on)
+        </h2>
+        <div>
+           SameAsRequest : @ViewData["SameAsRequest"]
+        </div>
+    </div>
+    <div>
+        <h2>
+            "Never": cookie was written in Secure Mode as off
+        </h2>
+        <div>
+           Never : @ViewData["Never"]
+        </div>
+    </div>
+    <div>
+        <h2>
+            "Always": cookie was written in Secure Mode as on
+        </h2>
+        <div>
+           Always : @ViewData["Always"]
+        </div>
+    </div>
+</div>
+</body>
+</html>
